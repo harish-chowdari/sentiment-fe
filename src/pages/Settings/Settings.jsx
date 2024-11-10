@@ -21,7 +21,7 @@ const Settings = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get(`https://sentiment-be-0uhp.onrender.com/api/user/${userId}`);
+        const res = await axios.get(`https://user-sentiments.onrender.com/api/user/${userId}`);
         setUserData(res.data.user);
         setUpdatedUserData(res.data.user);
       } catch (error) {
@@ -50,7 +50,7 @@ const Settings = () => {
   const handleSave = async () => {
     try {
       const res = await axios.put(
-        `https://sentiment-be-0uhp.onrender.com/api/edit-user/${userId}`,
+        `https://user-sentiments.onrender.com/api/edit-user/${userId}`,
         updatedUserData
       );
        

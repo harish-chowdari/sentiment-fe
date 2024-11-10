@@ -9,7 +9,7 @@ const UserCsvFiles = () => {
     // Fetch the list of files from the backend
     const getData = async () => {
         try {
-            const res = await axios.get(`https://sentiment-be-0uhp.onrender.com/api/user/${userId}`);
+            const res = await axios.get(`https://user-sentiments.onrender.com/api/user/${userId}`);
             setFiles(res.data.user.reviews);
             console.log(res.data.user.reviews);
         } catch (error) {
