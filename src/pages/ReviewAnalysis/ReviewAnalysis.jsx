@@ -61,7 +61,7 @@ const [sentimentData, setSentimentData] = useState({});
 
         try {
             const response = await axios.post(
-                "http://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api/reviews/analyzeReviews",
+                "https://user-sentiments.onrender.com/api/reviews/analyzeReviews",
                 formData,
                 {
                     headers: {
@@ -218,7 +218,7 @@ const [sentimentData, setSentimentData] = useState({});
                 formData.append("reviews", pdfBlob, "reviews.pdf");
                 formData.append("negativeReviewsCount", negativeReviews.length);
                 axios.post(
-                    `http://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api/reviews/addFile/${localStorage.getItem("userId")}`,
+                    `https://user-sentiments.onrender.com/api/reviews/addFile/${localStorage.getItem("userId")}`,
                     formData,
                     {
                         headers: {
