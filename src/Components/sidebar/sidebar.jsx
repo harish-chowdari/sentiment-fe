@@ -12,7 +12,7 @@ const Sidebar = () => {
       if (!confirmDelete) return;
 
       try {
-        const res = await axios.delete(`https://user-sentiments.onrender.com/api/delete-user/${userId}`);
+        const res = await axios.delete(`https://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api/delete-user/${userId}`);
         
         if (res.data && res.data.userDeleted) {
           alert(res.data.userDeleted);
