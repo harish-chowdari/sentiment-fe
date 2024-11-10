@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = "http://localhost:4003/api" 
+const BASE_URL = "http://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api" 
 
 const axiosInstance=axios.create({
     baseURL:BASE_URL,

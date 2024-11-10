@@ -61,7 +61,7 @@ const [sentimentData, setSentimentData] = useState({});
 
         try {
             const response = await axios.post(
-                "https://sentiment-be-0uhp.onrender.com/api/reviews/analyzeReviews",
+                "http://localhost:4003/api/reviews/analyzeReviews",
                 formData,
                 {
                     headers: {
