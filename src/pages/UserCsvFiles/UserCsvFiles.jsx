@@ -9,7 +9,7 @@ const UserCsvFiles = () => {
     // Fetch the list of files from the backend
     const getData = async () => {
         try {
-            const res = await axios.get(`https://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api/user/${userId}`);
+            const res = await axios.get(`http://ec2-18-222-167-54.us-east-2.compute.amazonaws.com:4003/api/user/${userId}`);
             setFiles(res.data.user.reviews);
             console.log(res.data.user.reviews);
         } catch (error) {
